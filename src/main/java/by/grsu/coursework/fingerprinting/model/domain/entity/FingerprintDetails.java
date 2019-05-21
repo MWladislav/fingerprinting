@@ -1,6 +1,9 @@
 package by.grsu.coursework.fingerprinting.model.domain.entity;
 
-public class FingerprintDetails {
+
+import java.io.Serializable;
+
+public class FingerprintDetails implements Serializable {
     private String fingerprint;
     private String userAgent;
     private String language;
@@ -261,5 +264,40 @@ public class FingerprintDetails {
 
     public void setAudio(String audio) {
         this.audio = audio;
+    }
+
+    @Override
+    public String toString() {
+        return "FingerprintDetails{" +
+                "fingerprint=" + fingerprint +
+                ", userAgent=" + userAgent +
+                ", language=" + language +
+                ", colorDepth=" + colorDepth +
+                ", deviceMemory=" + deviceMemory +
+                ", hardwareConcurrency=" + hardwareConcurrency +
+                ", screenResolution=" + screenResolution +
+                ", availableScreenResolution=" + availableScreenResolution +
+                ", timezoneOffset=" + timezoneOffset +
+                ", timezone=" + timezone +
+                ", sessionStorage=" + sessionStorage +
+                ", localStorage=" + localStorage +
+                ", indexedDb=" + indexedDb +
+                ", addBehavior=" + addBehavior +
+                ", openDatabase=" + openDatabase +
+                ", cpuClass=" + cpuClass +
+                ", platform=" + platform +
+                ", plugins=" + plugins +
+                ", canvas=" + canvas +
+                ", webgl=" + webgl +
+                ", webglVendorAndRenderer=" + webglVendorAndRenderer +
+                ", useAdBlock=" + useAdBlock +
+                ", hasLiedLanguages=" + hasLiedLanguages +
+                ", hasLiedResolution=" + hasLiedResolution +
+                ", hasLiedOs=" + hasLiedOs +
+                ", hasLiedBrowser=" + hasLiedBrowser +
+                ", touchSupport=" + touchSupport +
+                ", fonts=" + fonts +
+                ", audio=" + audio +
+                '}';
     }
 }

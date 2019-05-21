@@ -7,4 +7,6 @@ public interface FingerprintDetailsDao {
     FingerprintDetails getFingerprintDetailsByFingerprint(String fp);
 
     int saveFingerprintDetails(FingerprintDetails fingerprintDetails);
+
+    Integer isFingerprintDuplicaded(String fp);
 }
