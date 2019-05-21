@@ -13,12 +13,12 @@ public class FingerprintDetailsMapper implements RowMapper<FingerprintDetails> {
         fingerprintDetails.setFingerprint(resultSet.getString("user_fingerprint"));
         fingerprintDetails.setUserAgent(resultSet.getString("userAgent"));
         fingerprintDetails.setLanguage(resultSet.getString("language"));
-        fingerprintDetails.setColorDepth(resultSet.getInt("colorDepth"));
-        fingerprintDetails.setDeviceMemory(resultSet.getInt("deviceMemory"));
-        fingerprintDetails.setHardwareConcurrency(resultSet.getInt("hardwareConcurrency"));
+        fingerprintDetails.setColorDepth(resultSet.getString("colorDepth"));
+        fingerprintDetails.setPixelRatio(resultSet.getString("pixelRatio"));
+        fingerprintDetails.setHardwareConcurrency(resultSet.getString("hardwareConcurrency"));
         fingerprintDetails.setScreenResolution(resultSet.getString("screenResolution"));
         fingerprintDetails.setAvailableScreenResolution(resultSet.getString("availableScreenResolution"));
-        fingerprintDetails.setTimezoneOffset(resultSet.getInt("timezoneOffset"));
+        fingerprintDetails.setTimezoneOffset(resultSet.getString("timezoneOffset"));
         fingerprintDetails.setTimezone(resultSet.getString("timezone"));
         fingerprintDetails.setSessionStorage(resultSet.getInt("sessionStorage")==1);
         fingerprintDetails.setLocalStorage(resultSet.getInt("localStorage")==1);
@@ -39,6 +39,8 @@ public class FingerprintDetailsMapper implements RowMapper<FingerprintDetails> {
         fingerprintDetails.setTouchSupport(resultSet.getString("touchSupport"));
         fingerprintDetails.setFonts(resultSet.getString("fonts"));
         fingerprintDetails.setAudio(resultSet.getString("audio"));
+        fingerprintDetails.setFontsFlash(resultSet.getString("fontsFlash"));
+        fingerprintDetails.setEnumerateDevices(resultSet.getString("enumerateDevices"));
         return fingerprintDetails;
     }
 }

@@ -7,12 +7,12 @@ public class FingerprintDetails implements Serializable {
     private String fingerprint;
     private String userAgent;
     private String language;
-    private int colorDepth;
-    private int deviceMemory;
-    private int hardwareConcurrency;
+    private String colorDepth;
+    private String pixelRatio;
+    private String hardwareConcurrency;
     private String screenResolution;
     private String availableScreenResolution;
-    private int timezoneOffset;
+    private String timezoneOffset;
     private String timezone;
     private boolean sessionStorage;
     private boolean localStorage;
@@ -32,7 +32,9 @@ public class FingerprintDetails implements Serializable {
     private boolean hasLiedBrowser;
     private String touchSupport;
     private String fonts;
+    private String fontsFlash;
     private String audio;
+    private String enumerateDevices;
 
     public String getFingerprint() {
         return fingerprint;
@@ -58,27 +60,27 @@ public class FingerprintDetails implements Serializable {
         this.language = language;
     }
 
-    public int getColorDepth() {
+    public String getColorDepth() {
         return colorDepth;
     }
 
-    public void setColorDepth(int colorDepth) {
+    public void setColorDepth(String colorDepth) {
         this.colorDepth = colorDepth;
     }
 
-    public int getDeviceMemory() {
-        return deviceMemory;
+    public String getPixelRatio() {
+        return pixelRatio;
     }
 
-    public void setDeviceMemory(int deviceMemory) {
-        this.deviceMemory = deviceMemory;
+    public void setPixelRatio(String pixelRatio) {
+        this.pixelRatio = pixelRatio;
     }
 
-    public int getHardwareConcurrency() {
+    public String getHardwareConcurrency() {
         return hardwareConcurrency;
     }
 
-    public void setHardwareConcurrency(int hardwareConcurrency) {
+    public void setHardwareConcurrency(String hardwareConcurrency) {
         this.hardwareConcurrency = hardwareConcurrency;
     }
 
@@ -98,11 +100,11 @@ public class FingerprintDetails implements Serializable {
         this.availableScreenResolution = availableScreenResolution;
     }
 
-    public int getTimezoneOffset() {
+    public String getTimezoneOffset() {
         return timezoneOffset;
     }
 
-    public void setTimezoneOffset(int timezoneOffset) {
+    public void setTimezoneOffset(String timezoneOffset) {
         this.timezoneOffset = timezoneOffset;
     }
 
@@ -258,6 +260,14 @@ public class FingerprintDetails implements Serializable {
         this.fonts = fonts;
     }
 
+    public String getFontsFlash() {
+        return fontsFlash;
+    }
+
+    public void setFontsFlash(String fontsFlash) {
+        this.fontsFlash = fontsFlash;
+    }
+
     public String getAudio() {
         return audio;
     }
@@ -266,38 +276,48 @@ public class FingerprintDetails implements Serializable {
         this.audio = audio;
     }
 
+    public String getEnumerateDevices() {
+        return enumerateDevices;
+    }
+
+    public void setEnumerateDevices(String enumerateDevices) {
+        this.enumerateDevices = enumerateDevices;
+    }
+
     @Override
     public String toString() {
         return "FingerprintDetails{" +
-                "fingerprint=" + fingerprint +
-                ", userAgent=" + userAgent +
-                ", language=" + language +
-                ", colorDepth=" + colorDepth +
-                ", deviceMemory=" + deviceMemory +
-                ", hardwareConcurrency=" + hardwareConcurrency +
-                ", screenResolution=" + screenResolution +
-                ", availableScreenResolution=" + availableScreenResolution +
-                ", timezoneOffset=" + timezoneOffset +
-                ", timezone=" + timezone +
+                "fingerprint='" + fingerprint + '\'' +
+                ", userAgent='" + userAgent + '\'' +
+                ", language='" + language + '\'' +
+                ", colorDepth='" + colorDepth + '\'' +
+                ", pixelRatio='" + pixelRatio + '\'' +
+                ", hardwareConcurrency='" + hardwareConcurrency + '\'' +
+                ", screenResolution='" + screenResolution + '\'' +
+                ", availableScreenResolution='" + availableScreenResolution + '\'' +
+                ", timezoneOffset='" + timezoneOffset + '\'' +
+                ", timezone='" + timezone + '\'' +
                 ", sessionStorage=" + sessionStorage +
                 ", localStorage=" + localStorage +
                 ", indexedDb=" + indexedDb +
                 ", addBehavior=" + addBehavior +
                 ", openDatabase=" + openDatabase +
-                ", cpuClass=" + cpuClass +
-                ", platform=" + platform +
-                ", plugins=" + plugins +
-                ", canvas=" + canvas +
-                ", webgl=" + webgl +
-                ", webglVendorAndRenderer=" + webglVendorAndRenderer +
+                ", cpuClass='" + cpuClass + '\'' +
+                ", platform='" + platform + '\'' +
+                ", plugins='" + plugins + '\'' +
+                ", canvas='" + canvas + '\'' +
+                ", webgl='" + webgl + '\'' +
+                ", webglVendorAndRenderer='" + webglVendorAndRenderer + '\'' +
                 ", useAdBlock=" + useAdBlock +
                 ", hasLiedLanguages=" + hasLiedLanguages +
                 ", hasLiedResolution=" + hasLiedResolution +
                 ", hasLiedOs=" + hasLiedOs +
                 ", hasLiedBrowser=" + hasLiedBrowser +
-                ", touchSupport=" + touchSupport +
-                ", fonts=" + fonts +
-                ", audio=" + audio +
+                ", touchSupport='" + touchSupport + '\'' +
+                ", fonts='" + fonts + '\'' +
+                ", fontsFlash='" + fontsFlash + '\'' +
+                ", audio='" + audio + '\'' +
+                ", enumerateDevices='" + enumerateDevices + '\'' +
                 '}';
     }
 }
